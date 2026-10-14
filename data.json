@@ -1,0 +1,404 @@
+{
+  "quotes": [
+    {
+      "id": 1,
+      "text": "pink and intimate until the INSPECTOR arrives, and then it should be brighter and harder",
+      "character": "stage directions",
+      "act": 1,
+      "featured": true,
+      "themes": ["social class", "power", "dramatic devices"]
+    },
+    {
+      "id": 2,
+      "text": "a hard-headed, practical man of business",
+      "character": "birling",
+      "act": 1,
+      "featured": true,
+      "themes": ["capitalism", "social class"]
+    },
+    {
+      "id": 3,
+      "text": "unsinkable, absolutely unsinkable",
+      "character": "birling",
+      "act": 1,
+      "featured": true,
+      "themes": ["dramatic irony", "capitalism"]
+    },
+    {
+      "id": 4,
+      "text": "The Germans don't want war. Nobody wants war",
+      "character": "birling",
+      "act": 1,
+      "featured": false,
+      "themes": ["dramatic irony"]
+    },
+    {
+      "id": 5,
+      "text": "a man has to mind his own business and look after himself and his own",
+      "character": "birling",
+      "act": 1,
+      "featured": true,
+      "themes": ["responsibility", "capitalism"]
+    },
+    {
+      "id": 6,
+      "text": "community and all that nonsense",
+      "character": "birling",
+      "act": 1,
+      "featured": true,
+      "themes": ["responsibility", "socialism", "capitalism"]
+    },
+    {
+      "id": 7,
+      "text": "There's a fair chance that I might find my way into the next Honours List",
+      "character": "birling",
+      "act": 1,
+      "featured": false,
+      "themes": ["social class", "power"]
+    },
+    {
+      "id": 8,
+      "text": "Clothes mean something quite different to a woman",
+      "character": "birling",
+      "act": 1,
+      "featured": false,
+      "themes": ["gender"]
+    },
+    {
+      "id": 9,
+      "text": "men with important work to do sometimes have to spend nearly all their time and energy on their business",
+      "character": "mrsbirling",
+      "act": 1,
+      "featured": false,
+      "themes": ["gender", "social class"]
+    },
+    {
+      "id": 10,
+      "text": "Yes – except for all last summer, when you never came near me",
+      "character": "sheila",
+      "act": 1,
+      "featured": false,
+      "themes": ["gender", "dramatic irony"]
+    },
+    {
+      "id": 11,
+      "text": "an impression of massiveness, solidity and purposefulness",
+      "character": "stage directions",
+      "act": 1,
+      "featured": true,
+      "themes": ["power", "dramatic devices"]
+    },
+    {
+      "id": 12,
+      "text": "Burnt her inside out, of course",
+      "character": "inspector",
+      "act": 1,
+      "featured": false,
+      "themes": ["responsibility", "social class"]
+    },
+    {
+      "id": 13,
+      "text": "If you don't come down sharply on some of these people, they'd soon be asking for the earth",
+      "character": "birling",
+      "act": 1,
+      "featured": false,
+      "themes": ["capitalism", "social class", "power"]
+    },
+    {
+      "id": 14,
+      "text": "It's better to ask for the earth than to take it",
+      "character": "inspector",
+      "act": 1,
+      "featured": true,
+      "themes": ["socialism", "social class"]
+    },
+    {
+      "id": 15,
+      "text": "Why shouldn't they try for higher wages?",
+      "character": "eric",
+      "act": 1,
+      "featured": false,
+      "themes": ["age and generations", "socialism"]
+    },
+    {
+      "id": 16,
+      "text": "But these girls aren't cheap labour – they're people",
+      "character": "sheila",
+      "act": 1,
+      "featured": true,
+      "themes": ["social class", "responsibility", "age and generations"]
+    },
+    {
+      "id": 17,
+      "text": "I'll never, never do it again to anybody",
+      "character": "sheila",
+      "act": 1,
+      "featured": false,
+      "themes": ["responsibility", "guilt"]
+    },
+    {
+      "id": 18,
+      "text": "Why – you fool – he knows. Of course he knows",
+      "character": "sheila",
+      "act": 1,
+      "featured": false,
+      "themes": ["power", "guilt"]
+    },
+    {
+      "id": 19,
+      "text": "We often do on the young ones. They're more impressionable",
+      "character": "inspector",
+      "act": 2,
+      "featured": true,
+      "themes": ["age and generations", "responsibility"]
+    },
+    {
+      "id": 20,
+      "text": "You mustn't try to build up a kind of wall between us and that girl",
+      "character": "sheila",
+      "act": 2,
+      "featured": false,
+      "themes": ["social class", "responsibility"]
+    },
+    {
+      "id": 21,
+      "text": "Public men, birling, have responsibilities as well as privileges",
+      "character": "inspector",
+      "act": 2,
+      "featured": true,
+      "themes": ["responsibility", "power", "social class"]
+    },
+    {
+      "id": 22,
+      "text": "It's a favourite haunt of women of the town",
+      "character": "gerald",
+      "act": 2,
+      "featured": false,
+      "themes": ["gender", "hypocrisy"]
+    },
+    {
+      "id": 23,
+      "text": "young and fresh and charming",
+      "character": "gerald",
+      "act": 2,
+      "featured": false,
+      "themes": ["gender"]
+    },
+    {
+      "id": 24,
+      "text": "You were the wonderful Fairy Prince",
+      "character": "sheila",
+      "act": 2,
+      "featured": false,
+      "themes": ["gender", "hypocrisy"]
+    },
+    {
+      "id": 25,
+      "text": "I didn't feel about her as she felt about me",
+      "character": "gerald",
+      "act": 2,
+      "featured": false,
+      "themes": ["gender", "responsibility"]
+    },
+    {
+      "id": 26,
+      "text": "Girls of that class –",
+      "character": "mrsbirling",
+      "act": 2,
+      "featured": true,
+      "themes": ["social class", "gender"]
+    },
+    {
+      "id": 27,
+      "text": "As if a girl of that sort would ever refuse money!",
+      "character": "mrsbirling",
+      "act": 2,
+      "featured": false,
+      "themes": ["social class", "hypocrisy"]
+    },
+    {
+      "id": 28,
+      "text": "elaborate fine feelings and scruples that were simply absurd in a girl in her position",
+      "character": "mrsbirling",
+      "act": 2,
+      "featured": false,
+      "themes": ["social class", "gender"]
+    },
+    {
+      "id": 29,
+      "text": "I accept no blame for it at all",
+      "character": "mrsbirling",
+      "act": 2,
+      "featured": true,
+      "themes": ["responsibility", "age and generations"]
+    },
+    {
+      "id": 30,
+      "text": "Go and look for the father of the child. It's his responsibility",
+      "character": "mrsbirling",
+      "act": 2,
+      "featured": true,
+      "themes": ["responsibility", "dramatic irony"]
+    },
+    {
+      "id": 31,
+      "text": "compelled to confess in public his responsibility",
+      "character": "mrsbirling",
+      "act": 2,
+      "featured": false,
+      "themes": ["responsibility", "dramatic irony", "hypocrisy"]
+    },
+    {
+      "id": 32,
+      "text": "I was in that state when a chap easily turns nasty",
+      "character": "eric",
+      "act": 3,
+      "featured": false,
+      "themes": ["gender", "responsibility"]
+    },
+    {
+      "id": 33,
+      "text": "she treated me – as if I were a kid",
+      "character": "eric",
+      "act": 3,
+      "featured": false,
+      "themes": ["age and generations", "guilt"]
+    },
+    {
+      "id": 34,
+      "text": "You don't understand anything. You never did. You never even tried",
+      "character": "eric",
+      "act": 3,
+      "featured": false,
+      "themes": ["age and generations"]
+    },
+    {
+      "id": 35,
+      "text": "you killed them both – damn you, damn you",
+      "character": "eric",
+      "act": 3,
+      "featured": false,
+      "themes": ["responsibility", "age and generations", "guilt"]
+    },
+    {
+      "id": 36,
+      "text": "Each of you helped to kill her. Remember that",
+      "character": "inspector",
+      "act": 3,
+      "featured": true,
+      "themes": ["responsibility", "guilt"]
+    },
+    {
+      "id": 37,
+      "text": "Don't stammer and yammer at me again, man. I'm losing all patience with you people",
+      "character": "inspector",
+      "act": 3,
+      "featured": false,
+      "themes": ["power", "responsibility"]
+    },
+    {
+      "id": 38,
+      "text": "There are millions and millions and millions of Eva Smiths and John Smiths still left with us",
+      "character": "inspector",
+      "act": 3,
+      "featured": true,
+      "themes": ["social class", "socialism", "responsibility"]
+    },
+    {
+      "id": 39,
+      "text": "We don't live alone. We are members of one body. We are responsible for each other",
+      "character": "inspector",
+      "act": 3,
+      "featured": true,
+      "themes": ["responsibility", "socialism"]
+    },
+    {
+      "id": 40,
+      "text": "they will be taught it in fire and blood and anguish",
+      "character": "inspector",
+      "act": 3,
+      "featured": true,
+      "themes": ["responsibility", "socialism", "dramatic irony"]
+    },
+    {
+      "id": 41,
+      "text": "Probably a Socialist or some sort of crank",
+      "character": "birling",
+      "act": 3,
+      "featured": false,
+      "themes": ["socialism", "capitalism"]
+    },
+    {
+      "id": 42,
+      "text": "I've got to cover this up as soon as I can",
+      "character": "birling",
+      "act": 3,
+      "featured": false,
+      "themes": ["hypocrisy", "power", "social class"]
+    },
+    {
+      "id": 43,
+      "text": "The fact remains that I did what I did",
+      "character": "eric",
+      "act": 3,
+      "featured": false,
+      "themes": ["responsibility", "age and generations", "guilt"]
+    },
+    {
+      "id": 44,
+      "text": "He inspected us all right",
+      "character": "sheila",
+      "act": 3,
+      "featured": false,
+      "themes": ["responsibility"]
+    },
+    {
+      "id": 45,
+      "text": "I was the only one of you who didn't give in to him",
+      "character": "mrsbirling",
+      "act": 3,
+      "featured": false,
+      "themes": ["responsibility", "age and generations"]
+    },
+    {
+      "id": 46,
+      "text": "the famous younger generation who know it all",
+      "character": "birling",
+      "act": 3,
+      "featured": false,
+      "themes": ["age and generations"]
+    },
+    {
+      "id": 47,
+      "text": "The point is, you don't seem to have learnt anything",
+      "character": "sheila",
+      "act": 3,
+      "featured": true,
+      "themes": ["responsibility", "age and generations"]
+    },
+    {
+      "id": 48,
+      "text": "It frightens me the way you talk",
+      "character": "sheila",
+      "act": 3,
+      "featured": false,
+      "themes": ["age and generations", "responsibility"]
+    },
+    {
+      "id": 49,
+      "text": "Everything's all right now, Sheila. What about this ring?",
+      "character": "gerald",
+      "act": 3,
+      "featured": false,
+      "themes": ["responsibility", "gender"]
+    },
+    {
+      "id": 50,
+      "text": "A girl has just died – on her way to the Infirmary",
+      "character": "birling",
+      "act": 3,
+      "featured": true,
+      "themes": ["responsibility", "dramatic devices"]
+    }
+  ]
+}
