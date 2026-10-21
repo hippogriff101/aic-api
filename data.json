@@ -1,9 +1,8 @@
-{
-  "quotes": [
+[
     {
       "id": 1,
       "text": "pink and intimate until the INSPECTOR arrives, and then it should be brighter and harder",
-      "character": "stage directions",
+      "character": "stagedirections",
       "act": 1,
       "featured": true,
       "themes": ["social class", "power", "dramatic devices"]
@@ -83,7 +82,7 @@
     {
       "id": 11,
       "text": "an impression of massiveness, solidity and purposefulness",
-      "character": "stage directions",
+      "character": "stagedirections",
       "act": 1,
       "featured": true,
       "themes": ["power", "dramatic devices"]
@@ -400,5 +399,4 @@
       "featured": true,
       "themes": ["responsibility", "dramatic devices"]
     }
-  ]
-}
+]
