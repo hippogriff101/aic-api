@@ -19,23 +19,49 @@ app.get('/quotes/featured', (req, res) => {
 app.get('/quotes/random', (req, res) => {
   const index = Math.floor(Math.random() * quotes.length);
   res.json(quotes[index]);
+});
+
+app.get('/characters', (req, res) => {
+  const name = quotes.map(quote => quote.character);
+  res.json(Array.from(new Set(name)));
+})
+
+app.get('/themes', (req, res) => {
+  const theme = quotes.map(quote => quote.themes).flat();
+  res.json(Array.from(new Set(theme)));
 })
 
 // you actualy search / filters smthin 
 app.get('/quotes/:name', (req, res) => {
-  res.json(quotes.filter(quote => quote.character === req.params.name.toLowerCase()));
+  const results = quotes.filter(quote => quote.character === req.params.name.toLowerCase());  
+  if (results.length === 0) {
+    return res.status(404).json({ error: "This character doesn't exist!"});
+  }
+  res.json(results);
 });
 
 app.get('/quotes/featured/:name', (req, res) => {
-  res.json(quotes.filter(quote => quote.character === req.params.name.toLowerCase() && quote.featured));
+  const results = quotes.filter(quote => quote.character === req.params.name.toLowerCase() && quote.featured);
+  if (results.length === 0) {
+    return res.status(404).json({ error: "No featured quotes for this character!"});
+  }
+  res.json(results);
 });
 
 app.get('/quotes/theme/:theme', (req, res) => {
-  res.json(quotes.filter(quote => quote.themes.includes(req.params.theme)));
+  const results = quotes.filter(quote => quote.themes.includes(req.params.theme.toLowerCase()));
+  if (results.length === 0) {
+    return res.status(404).json({ error: "This theme doesn't exist!"});
+  }
+  res.json(results)  
 });
 
 app.get('/quotes/act/:act', (req, res) => {
-  res.json(quotes.filter(quote => quote.act === Number(req.params.act)));
+  const results = quotes.filter(quote => quote.act === Number(req.params.act));
+  if (results.length === 0) {
+    return res.status(404).json({ error: "This act doesn't exist! The play only has 3."});
+  }
+  res.json(results);
 });
 
 app.listen(port, () => {
