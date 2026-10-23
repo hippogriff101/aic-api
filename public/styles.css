@@ -42,6 +42,7 @@ h1, h2, h3 {
 
 #char-output {
     text-transform: capitalize;
+    font-style: italic;
 }
 
 .quote-machine {
