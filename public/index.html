@@ -18,13 +18,65 @@
     <p>The play follows Birling family as they learn about a lower-class woman called Eva Smith who has committed suicide.</p>
     <p>The play serves as a reminder of social responsibility  in the post-war Britain of  1945 but is still studied by millions of students across the UK.</p>
     <a href="https://www.bbc.co.uk/bitesize/topics/zpr639q"><img src="https://www.thereader.org.uk/wp-content/uploads/2016/07/tumblr_static_tumblr_static__640-1.jpg"></a>
-    <div class="quote-machine">
+    <div class="boxed">
         <h2>Get a Random Quote Machine</h2>
         <i id="output">Your quote will appear here!</i>
         <small id="char-output"></small>
         <br><br>
         <button id="get-quote">Click here!</button>
     </div>
+    <h2>Docs</h2>
+    <table>
+        <tr>
+            <th>Scope</th>
+            <th>What it does?</th>
+        </tr>
+        <tr>
+            <td>/quotes</td>
+            <td>Get all quotes</td>
+        </tr>
+        <tr>
+            <td>/quotes/featured</td>
+            <td>Get featured quotes</td>
+        </tr>
+        <tr>
+            <td>/quotes/random</td>
+            <td>Get a random quote</td>
+        </tr>
+        <tr>
+            <td>/quotes/{name}</td>
+            <td>Get quotes by character</td>
+        </tr>
+        <tr>
+            <td>/quotes/featured/{name}</td>
+            <td>Get featured quotes by character</td>
+        </tr>
+        <tr>
+            <td>/quotes/theme/{theme}</td>
+            <td>Get quotes by theme</td>
+        </tr>
+        <tr>
+            <td>/quotes/act/{act}</td>
+            <td>Get quotes by act</td>
+        </tr>
+        <tr>
+            <td>/characters</td>
+            <td>List all characters</td>
+        </tr>
+        <tr>
+            <td>/themes</td>
+            <td>List all themes</td>
+        </tr>
+    </table>
+    <br>
+    <footer class="boxed">
+        <h2>Credits</h2>
+        <p>This site and API was created by <a href="https://freddieyershon.co.uk">Freddie</a> for Hack Club's <a href="https://expedition.hackclub.com/">Expedition</a>!</p>
+        <p>This sites code is fully open source on GitHub, you can find it <a href="https://github.com/hippogriff101/aic-api">here</a>.</p>
+        <p>For more information, such as how to run yourself locally, check the repo's <code>README.md</code>.</p>
+        <small>Thanks for checking out this site, any questions, feel free to let me know!</small>
+        <br>
+    </footer>
 <script>
     const displayNames = {
         mrsbirling: "mrs birling",
