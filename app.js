@@ -32,9 +32,9 @@ app.get('/themes', (req, res) => {
 
 // you actualy search / filters smthin 
 app.get('/quotes/:name', (req, res) => {
-  const results = quotes.filter(quote => quote.character === req.params.name.toLowerCase());  
+  const results = quotes.filter(quote => quote.character === req.params.name.toLowerCase());
   if (results.length === 0) {
-    return res.status(404).json({ error: "This character doesn't exist or doesn't have any quotes!"});
+    return res.status(404).json({ error: "This character doesn't exist or doesn't have any quotes!" });
   }
   res.json(results);
 });
@@ -42,7 +42,7 @@ app.get('/quotes/:name', (req, res) => {
 app.get('/quotes/featured/:name', (req, res) => {
   const results = quotes.filter(quote => quote.character === req.params.name.toLowerCase() && quote.featured);
   if (results.length === 0) {
-    return res.status(404).json({ error: "No featured quotes for this character!"});
+    return res.status(404).json({ error: "No featured quotes for this character!" });
   }
   res.json(results);
 });
@@ -50,15 +50,15 @@ app.get('/quotes/featured/:name', (req, res) => {
 app.get('/quotes/theme/:theme', (req, res) => {
   const results = quotes.filter(quote => quote.themes.includes(req.params.theme.toLowerCase()));
   if (results.length === 0) {
-    return res.status(404).json({ error: "This theme doesn't exist!"});
+    return res.status(404).json({ error: "This theme doesn't exist!" });
   }
-  res.json(results)  
+  res.json(results)
 });
 
 app.get('/quotes/act/:act', (req, res) => {
   const results = quotes.filter(quote => quote.act === Number(req.params.act));
   if (results.length === 0) {
-    return res.status(404).json({ error: "This act doesn't exist! The play only has 3."});
+    return res.status(404).json({ error: "This act doesn't exist! The play only has 3." });
   }
   res.json(results);
 });

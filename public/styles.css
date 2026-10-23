@@ -5,7 +5,8 @@ body {
     font-family: "Oldenburg", serif;
 }
 
-a, hr {
+a,
+hr {
     color: #ddbea9;
     transition: color 0.2s ease-in-out, font-size 0.2s ease-in-out;
 
@@ -41,10 +42,12 @@ img:hover {
     transform: scale(1.1);
 }
 
-h1, h2, h3 {
-  font-family: "Old Standard TT", serif;
-  font-weight: 400;
-  font-style: italic;
+h1,
+h2,
+h3 {
+    font-family: "Old Standard TT", serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
 #char-output {
@@ -58,8 +61,10 @@ h1, h2, h3 {
     margin: 50px
 }
 
-table, th, td {
-    border:1px solid black;
+table,
+th,
+td {
+    border: 1px solid black;
     margin: 0px auto;
     font-family: "Oldenburg", serif;
 }

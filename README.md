@@ -26,7 +26,7 @@ Here are some scope to get started:
 
 - API endpoints to filter quotes by character `/quotes/[name]`
 
-- Main page and documentation (in development)
+- Main page and documentation with custom css
 
 ## How to run locally
 
@@ -40,8 +40,14 @@ _(make sure `npm` is installed, if not [look here](https://docs.npmjs.com/downlo
 
 Head to `localhost:3000` and you should be good to go!
 
-## Credits
+## Credits & Notes
 
 `public/openapi.yaml`, made by Claude caues idk how to make one
 
 Claude aslso helped with debugging things!
+
+Formatted using `Shift` + `Alt` + `F` (on VSCode for Windows) - thought it best to note
+
+Hackatime catogorised most of my time in `app.js` as debugging for some reason, this was actual coding time!
+
+Jacob (for his version of the same project, super cool)!!!!!
