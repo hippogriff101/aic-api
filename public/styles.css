@@ -1,0 +1,50 @@
+body {
+    text-align: center;
+    background-color: #cb997e;
+    color: #ffe8d6;
+    font-family: "Oldenburg", serif;
+}
+
+a, hr {
+    color: #ddbea9;
+}
+
+button {
+    background-color: #ddbea9;
+    color: #cb997e;
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    border: #ddbea9 solid 3px;
+    transition: all 0.2s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+h1, h2, h3 {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+#char-output {
+    text-transform: capitalize;
+}
+
+.quote-machine {
+    border: #ddbea9 solid 3px;
+    padding: 10px;
+}

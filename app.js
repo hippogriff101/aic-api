@@ -2,12 +2,11 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const quotes = require('./data.json');
+const path = require('path');
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 // The Big Stuff (like routes stuff /something)
-app.get('/', (req, res) => {
-  res.send('Welcome to the An Inspector Calls API! Made by Freddie.');
-});
-
 app.get('/quotes', (req, res) => {
   res.json(quotes);
 });
@@ -35,7 +34,7 @@ app.get('/themes', (req, res) => {
 app.get('/quotes/:name', (req, res) => {
   const results = quotes.filter(quote => quote.character === req.params.name.toLowerCase());  
   if (results.length === 0) {
-    return res.status(404).json({ error: "This character doesn't exist!"});
+    return res.status(404).json({ error: "This character doesn't exist or doesn't have any quotes!"});
   }
   res.json(results);
 });

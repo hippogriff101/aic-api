@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIC API</title>
+    <link rel="stylesheet" href="/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Oldenburg&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>An Inspector Calls API</h1>
+    <p>The best way to get all the quotes needed for Paper 2 of the AQA GCSE English Literature exam!</p>
+    <hr>
+    <p><i>An Inspector Calls</i> is a play written by J. B Priestley, first performed in May 1945.</p>
+    <p>The play follows Birling family as they learn about a lower-class woman called Eva Smith who has committed suicide.</p>
+    <p>The play serves as a reminder of social responsibility  in the post-war Britain of  1945 but is still studied by millions of students across the UK.</p>
+    <img src="https://www.thereader.org.uk/wp-content/uploads/2016/07/tumblr_static_tumblr_static__640-1.jpg">
+    <div class="quote-machine">
+        <h2>Get a Random Quote Machine</h2>
+        <i id="output">Your quote will appear here!</i>
+        <p id="char-output"></p>
+        <br>
+        <button id="get-quote">Click here!</button>
+    </div>
+<script>
+    const displayNames = {
+        mrsbirling: "mrs birling",
+        stagedirections: "stage directions",
+        birling: "mr birling"
+    };
+
+    function getQuote() {
+        fetch('/quotes/random')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('output').textContent = "'" + data.text + "'";
+            document.getElementById('char-output').textContent = displayNames[data.character] || data.character;
+        });
+    }
+    document.getElementById('get-quote').addEventListener('click', getQuote);
+</script>
+</body>
+</html>
