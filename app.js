@@ -23,12 +23,12 @@ app.get('/quotes/random', (req, res) => {
 app.get('/characters', (req, res) => {
   const name = quotes.map(quote => quote.character);
   res.json(Array.from(new Set(name)));
-})
+});
 
 app.get('/themes', (req, res) => {
   const theme = quotes.map(quote => quote.themes).flat();
   res.json(Array.from(new Set(theme)));
-})
+});
 
 // you actualy search / filters smthin 
 app.get('/quotes/:name', (req, res) => {
@@ -40,7 +40,12 @@ app.get('/quotes/:name', (req, res) => {
 });
 
 app.get('/quotes/featured/:name', (req, res) => {
-  const results = quotes.filter(quote => quote.character === req.params.name.toLowerCase() && quote.featured);
+  const name = req.params.name.toLowerCase();
+  const characterQuotes = quotes.filter(quote => quote.character === name);
+  if (characterQuotes.length === 0) {
+    return res.status(404).json({ error: "This character doesn't exist!" });
+  }
+  const results = characterQuotes.filter(quote => quote.featured);
   if (results.length === 0) {
     return res.status(404).json({ error: "No featured quotes for this character!" });
   }
@@ -58,7 +63,7 @@ app.get('/quotes/theme/:theme', (req, res) => {
 app.get('/quotes/act/:act', (req, res) => {
   const results = quotes.filter(quote => quote.act === Number(req.params.act));
   if (results.length === 0) {
-    return res.status(404).json({ error: "This act doesn't exist! The play only has 3." });
+    return res.status(404).json({ error: "This act doesn't exist!" });
   }
   res.json(results);
 });
