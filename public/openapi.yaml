@@ -1,0 +1,246 @@
+openapi: 3.1.0
+info:
+  title: An Inspector Calls API
+  version: 1.0.0
+  description: |
+    Quotes from J.B. Priestley's *An Inspector Calls*, for GCSE revision.
+
+    Filter quotes by character, theme or act, get featured quotes, or grab a random one.
+    Character names and themes are case-insensitive.
+
+tags:
+  - name: Quotes
+    description: Get quotes, filtered in different ways
+  - name: Lists
+    description: Find out which characters and themes you can search for
+
+paths:
+  /quotes:
+    get:
+      tags: [Quotes]
+      summary: Get all quotes
+      description: Returns every quote in the API.
+      responses:
+        '200':
+          description: A list of every quote
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QuoteList'
+
+  /quotes/featured:
+    get:
+      tags: [Quotes]
+      summary: Get featured quotes
+      description: Returns the most important quotes to learn, the ones worth memorising first.
+      responses:
+        '200':
+          description: A list of featured quotes
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QuoteList'
+
+  /quotes/random:
+    get:
+      tags: [Quotes]
+      summary: Get a random quote
+      description: Returns one quote picked at random. Good for flashcard-style revision.
+      responses:
+        '200':
+          description: A single random quote
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Quote'
+
+  /quotes/{name}:
+    get:
+      tags: [Quotes]
+      summary: Get quotes by character
+      description: Returns every quote from one character. Use `/characters` to see the valid names.
+      parameters:
+        - $ref: '#/components/parameters/CharacterName'
+      responses:
+        '200':
+          description: Quotes from that character
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QuoteList'
+        '404':
+          description: That character doesn't exist or has no quotes
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                error: This character doesn't exist or doesn't have any quotes!
+
+  /quotes/featured/{name}:
+    get:
+      tags: [Quotes]
+      summary: Get featured quotes by character
+      description: Returns only the featured quotes from one character.
+      parameters:
+        - $ref: '#/components/parameters/CharacterName'
+      responses:
+        '200':
+          description: Featured quotes from that character
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QuoteList'
+        '404':
+          description: No featured quotes found for that character
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                error: No featured quotes for this character!
+
+  /quotes/theme/{theme}:
+    get:
+      tags: [Quotes]
+      summary: Get quotes by theme
+      description: Returns every quote linked to a theme. Use `/themes` to see the valid themes.
+      parameters:
+        - name: theme
+          in: path
+          required: true
+          description: The theme to search for (case-insensitive). Themes with spaces need `%20` in the URL.
+          schema:
+            type: string
+          example: responsibility
+      responses:
+        '200':
+          description: Quotes with that theme
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QuoteList'
+        '404':
+          description: That theme doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                error: This theme doesn't exist!
+
+  /quotes/act/{act}:
+    get:
+      tags: [Quotes]
+      summary: Get quotes by act
+      description: Returns every quote from one act of the play.
+      parameters:
+        - name: act
+          in: path
+          required: true
+          description: The act number (1, 2 or 3)
+          schema:
+            type: integer
+            enum: [1, 2, 3]
+          example: 1
+      responses:
+        '200':
+          description: Quotes from that act
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QuoteList'
+        '404':
+          description: That act doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                error: This act doesn't exist! The play only has 3.
+
+  /characters:
+    get:
+      tags: [Lists]
+      summary: List all characters
+      description: Returns the name of every character that has quotes, in the form to use in URLs.
+      responses:
+        '200':
+          description: A list of character names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+              example: [stage directions, birling, mrsbirling, sheila, inspector, eric, gerald]
+
+  /themes:
+    get:
+      tags: [Lists]
+      summary: List all themes
+      description: Returns every theme that quotes are tagged with.
+      responses:
+        '200':
+          description: A list of themes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+              example: [social class, power, responsibility, gender, age and generations]
+
+components:
+  parameters:
+    CharacterName:
+      name: name
+      in: path
+      required: true
+      description: The character's name (case-insensitive). Use `/characters` to see the valid names.
+      schema:
+        type: string
+      example: sheila
+
+  schemas:
+    Quote:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Unique ID for the quote
+          example: 16
+        text:
+          type: string
+          description: The quote itself
+          example: But these girls aren't cheap labour – they're people
+        character:
+          type: string
+          description: Who says it
+          example: sheila
+        act:
+          type: integer
+          description: Which act it's from
+          example: 1
+        featured:
+          type: boolean
+          description: Whether it's one of the key quotes to learn
+          example: true
+        themes:
+          type: array
+          description: Themes the quote links to
+          items:
+            type: string
+          example: [social class, responsibility, age and generations]
+
+    QuoteList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Quote'
+
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+          description: What went wrong

@@ -39,3 +39,9 @@ _(make sure `npm` is installed, if not [look here](https://docs.npmjs.com/downlo
 3. `node app.js`
 
 Head to `localhost:3000` and you should be good to go!
+
+## Credits
+
+`public/openapi.yaml`, made by Claude caues idk how to make one
+
+Claude aslso helped with debugging things!
