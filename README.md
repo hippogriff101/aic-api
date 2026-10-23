@@ -16,7 +16,7 @@ Here are some scope to get started:
 |--------------------------|--------------------------------|
 | `/quotes`                | list of quotes                 |
 | `quotes/random`          | random quote                   |
-| `quotes/[character name] | all quotes from that character |
+| `quotes/[character name]`| all quotes from that character |
 
 ## Features
 
@@ -39,6 +39,15 @@ _(make sure `npm` is installed, if not [look here](https://docs.npmjs.com/downlo
 3. `node app.js`
 
 Head to `localhost:3000` and you should be good to go!
+
+## How can you help?
+
+If you are up for it, here are a few things you can do to help!
+
+- Start the repo (it's a nice way to show support)
+- Add more quotes to `data.json`
+- Add more scopes
+- PR stuff in! I don't really want slop but use AI to help
 
 ## Credits & Notes
 
